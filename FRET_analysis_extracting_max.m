@@ -46,7 +46,7 @@ writematrix(BCK,"Analysed_"+str1+".csv") %%
 
 %% plot data all
 
-figure (90)
+figure (91)
 subplot (2,2,1)
 plot (CleanedData(:, 1), mean(CFP,2), 'b','LineWidth', 2)
 hold on;
@@ -76,7 +76,7 @@ ylabel('Norm. cyan/yellow');
 
 
 %% SAVE FIGURE
-saveas(figure(90), "Figure_"+str1+".tiff");
+saveas(figure(91), "Figure_"+str1+".tiff");
 
 %% Calculate the FRET change at specified times
 %First, calculate the baseline/starting FRET values and Max
@@ -207,9 +207,3 @@ function y1 = yellow_normal (YFP)
 avg2 = mean (YFP(10:50, :));
 y1 = ((YFP./avg2)*100)-100;
 end
-
-
-
-
-
-
